@@ -7,11 +7,24 @@ function setup() {
 function draw() {
   
   noStroke()
-  fill(255);
-  ellipse(mouseX, mouseY, 1, 1)
-}
-
-function mousePressed()
-{
+  if(key === "r")
+  {
+      fill(255, 0, 0);
+  }
+  else if(key === "b")
+  {
+    fill(0, 0, 255);
+  }
+  else if(key === "g")
+  {
+    fill(0, 255, 0);
+  }
+  else if(key === "c")
+  {
     background(100);
   }
+  
+  if (mouseIsPressed) {
+    ellipse(mouseX, mouseY, 20, 20)
+  }
+}  
